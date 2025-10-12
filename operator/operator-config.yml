@@ -1,0 +1,21 @@
+apiVersion: core.k8sgpt.ai/v1alpha1
+kind: K8sGPT
+metadata:
+  name: k8sgpt-analyzer
+  namespace: k8sgpt
+spec:
+  ai:
+    enabled: true # Désactivez l'IA pour les tests initiaux
+    secret:
+      name: k8sgpt-secret
+      key: azureopenai_secret
+    model: gpt-4o-mini
+    backend: azureopenai
+    baseUrl: https://k8sgpt-openai-france.cognitiveservices.azure.com/
+    engine: gpt-4o-mini
+    language: french
+  analysis:
+    interval: "1m" # Set analysis interval to 1 minute
+  noCache: false
+  repository: ghcr.io/k8sgpt-ai/k8sgpt
+  version: v0.4.25

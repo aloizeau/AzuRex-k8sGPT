@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+  namespace: default
+spec:
+  storageClassName: non-existent-storage-class
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-with-pvc
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-with-pvc
+  template:
+    metadata:
+      labels:
+        app: app-with-pvc
+    spec:
+      containers:
+        - name: app-with-pvc
+          image: mcr.microsoft.com/mssql/server:2022-latest
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          livenessProbe:
+            tcpSocket:
+              port: 1433
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            tcpSocket:
+              port: 1433
+            initialDelaySeconds: 15
+            periodSeconds: 10
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: my-pvc

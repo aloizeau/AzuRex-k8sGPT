@@ -1,0 +1,27 @@
+{
+  "cmd": "kubectl logs -n k8sgpt k8sgpt-operator-5c6f7f4b7b-zzx9p -c k8sgpt-operator",
+  "outputs": [
+    {
+      "level": "info",
+      "ts": 1760111258.7538877,
+      "caller": "server/server.go:147",
+      "msg": "binding metrics to 8081"
+    },
+    {
+      "level": "info",
+      "ts": 1760111258.7540803,
+      "caller": "server/server.go:106",
+      "msg": "binding api to 8080"
+    },
+    {
+      "level": "info",
+      "ts": 1760111331.5093255,
+      "caller": "server/log.go:50",
+      "msg": "request completed",
+      "duration_ms": 16395,
+      "method": "/schema.v1.ServerAnalyzerService/Analyze",
+      "request": "backend:\"azureopenai\" explain:true anonymize:true language:\"french\" max_concurrency:10 output:\"json\"",
+      "remote_addr": "10.244.0.76:59584"
+    }
+  ]
+}
