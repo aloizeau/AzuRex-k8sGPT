@@ -15,7 +15,7 @@ spec:
     engine: gpt-4o-mini
     language: french
   analysis:
-    interval: "1m" # Set analysis interval to 1 minute
+    interval: "5m" # Set analysis interval to 5 minutes
   noCache: false
   repository: ghcr.io/k8sgpt-ai/k8sgpt
   version: v0.4.25

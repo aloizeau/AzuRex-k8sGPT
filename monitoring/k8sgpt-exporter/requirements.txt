@@ -1,0 +1,2 @@
+prometheus_client>=0.16.0
+kubernetes>=24.0.0
