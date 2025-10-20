@@ -7,16 +7,14 @@ Ce dépôt contient des exemples de configurations Kubernetes pour démontrer co
 ## Table des matières
 - [Introduction](#introduction)
 - [Prérequis](#prérequis)
-- [Comment utiliser ces fichiers avec k8sGPT ?]()
-  - [1. Pod en état `Pending`](#1-pod-en-état-pending)
-  - [2. Pod en état `ErrImagePull`](#2-pod-en-état-errimagepull)
-  - [3. Pod en état `CrashLoopBackOff`](#3-pod-en-état-crashloopbackoff)
-  - [4. Pod en état `OOMKilled`](#4-pod-en-état-oomkilled)
-  - [5. Erreur de configuration `Ingress`](#5-erreur-de-configuration-ingress)
-  - [6. Service sans `endpoints`](#6-service-sans-endpoints)
-- [Utilisation de k8sGPT](#utilisation-de-k8sgpt)
-- [Nettoyage](#nettoyage)
-- [Ressources](#ressources)
+- [Démonstrations](#démonstrations)
+  - 1. Pod en état `Pending`
+  - 2. Pod en état `ErrImagePull`
+  - 3. Pod en état `CrashLoopBackOff`
+  - 4. Pod en état `OOMKilled`
+  - 5. Erreur de configuration `Ingress`
+  - 6. Service sans `endpoints`
+- [Comment utiliser ces fichiers avec k8sGPT ?](#utilisation-de-k8sgpt)
 
 ---
 
@@ -71,5 +69,6 @@ Ce fichier crée un Service qui n'a pas d'endpoints associés (pas de Pods avec 
 
 - Utilisez le mode interactif pour poser des questions spécifiques :
 `k8sgpt analyze --explain --namespace=dev --interactive`
+
 
 
