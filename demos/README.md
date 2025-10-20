@@ -14,7 +14,7 @@ Ce dépôt contient des exemples de configurations Kubernetes pour démontrer co
   - 4. Pod en état `OOMKilled`
   - 5. Erreur de configuration `Ingress`
   - 6. Service sans `endpoints`
-- [Comment utiliser ces fichiers avec k8sGPT ?](#utilisation-de-k8sgpt)
+- [Comment utiliser ces fichiers avec k8sGPT ?](#comment-utiliser-ces-fichiers-avec-k8sgpt-)
 
 ---
 
@@ -69,6 +69,7 @@ Ce fichier crée un Service qui n'a pas d'endpoints associés (pas de Pods avec 
 
 - Utilisez le mode interactif pour poser des questions spécifiques :
 `k8sgpt analyze --explain --namespace=dev --interactive`
+
 
 
 
