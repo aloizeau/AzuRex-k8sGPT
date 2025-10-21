@@ -31,6 +31,15 @@ Ce dépôt fournit des exemples de configurations YAML pour reproduire des erreu
 
 ## Démonstrations
 
+<code> 
+kubectl apply -f pod-pending.yaml <br>
+kubectl apply -f pod-errimagepull.yaml <br>
+kubectl apply -f pod-crashloopbackoff.yaml <br>
+kubectl apply -f pod-oomkilled.yaml <br>
+kubectl apply -f ingress-error.yaml <br>
+kubectl apply -f service-no-endpoints.yaml <br>
+</code>
+
 ### 1. Pod en état Pending (problème de nodeAffinity ou taints)
 Ce fichier crée un Pod qui ne peut pas être planifié à cause d'une nodeAffinity trop restrictive ou de taints non tolérés.
 > Fichier : `pod-pending.yaml`
@@ -70,6 +79,20 @@ Ce fichier crée un Service qui n'a pas d'endpoints associés (pas de Pods avec 
 - Utilisez le mode interactif pour poser des questions spécifiques :
 `k8sgpt analyze --explain --namespace=dev --interactive`
 
+## Nettoyage
+Pour supprimer toutes les ressources créées pendant la démonstration :
 
+<code>
+kubectl delete -f pod-pending.yaml <br>
+kubectl delete -f pod-errimagepull.yaml <br>
+kubectl delete -f pod-crashloopbackoff.yaml <br>
+kubectl delete -f pod-oomkilled.yaml <br>
+kubectl delete -f ingress-error.yaml <br>
+kubectl delete -f service-no-endpoints.yaml <br>
+</code>
 
+## Ressources
+
+[Documentation officielle de k8sGPT](https://docs.k8sgpt.ai/)
+[Dépôt GitHub de k8sGPT](https://github.com/k8sgpt-ai/k8sgpt)
 
