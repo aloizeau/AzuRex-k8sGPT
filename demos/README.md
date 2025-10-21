@@ -93,6 +93,6 @@ kubectl delete -f service-no-endpoints.yaml <br>
 
 ## Ressources
 
-[Documentation officielle de k8sGPT](https://docs.k8sgpt.ai/)
-[Dépôt GitHub de k8sGPT](https://github.com/k8sgpt-ai/k8sgpt)
+- [Documentation officielle de k8sGPT](https://docs.k8sgpt.ai/)
+- [Dépôt GitHub de k8sGPT](https://github.com/k8sgpt-ai/k8sgpt)
 
