@@ -14,8 +14,13 @@ spec:
     baseUrl: https://k8sgpt-openai-france.cognitiveservices.azure.com/
     engine: gpt-4o-mini
     language: french
+    anonymized: true
   analysis:
-    interval: "5m" # Set analysis interval to 5 minutes
+    interval: "10m" # Set analysis interval to 10 minutes
   noCache: false
   repository: ghcr.io/k8sgpt-ai/k8sgpt
   version: v0.4.25
+  targetNamespace: default
+  # sink:
+  #   type: slack
+  #   webhook: https://smartcloudarchitect.webhook.office.com/webhookb2/db229b95-78f6-4819-8d89-f83f84708d7a@e8ee875b-e9a5-4716-9457-b11fb35ec84f/IncomingWebhook/eec40ed500a24effa4ab990dfb83a62e/3fc8eb7d-763d-4d6d-8bec-b063d633bfe7/V2iVK_wEwX2FrVY8O-HdfXhepxmo6yr45Lgtq83xDs6H41

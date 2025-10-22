@@ -1,0 +1,703 @@
+{
+  "cmd": "kubectl get results -n k8sgpt -o json",
+  "outputs": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T08:02:35Z",
+          "generation": 32,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "aksagentpool96467877vmss000001",
+          "namespace": "k8sgpt",
+          "resourceVersion": "227082",
+          "uid": "03b4c55c-8f72-47f1-b3a9-40d0e42eadf1"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le message indique que plusieurs composants du nœud Kubernetes sont opérationnels sans problèmes majeurs, y compris kubelet, containerd, Docker, et le système de fichiers, ce qui suggère que le nœud fonctionne correctement.\n\nSolution: \n1. Vérifiez les logs du nœud pour des indices supplémentaires.\n2. Assurez-vous que le réseau est configuré correctement.\n3. Redémarrez les services si nécessaire.\n4. Surveillez l'état du nœud pour confirmer la stabilité.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "T2NEPUFeSG13I2YpSD9MVFBNWlhPSCMyfXQud0BxREVq",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type KubeletProblem, reason KubeletIsUp: kubelet service is up"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "MFZ7SD4kbSJYcUUlQGJbbCFoKGkvMCp0NHRsdWheZU5P",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type FrequentContainerdRestart, reason NoFrequentContainerdRestart: containerd is functioning properly"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "MkpJTlg+PCdOSlFkamV1aWY8RShiLjdbNShfMC4kfEdK",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type FrequentUnregisterNetDevice, reason NoFrequentUnregisterNetDevice: node is functioning properly"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "THZSS0FqfVkoNWpkaV80I2IoMj1qTDJ3ZmpeOiQwQ189",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type FrequentKubeletRestart, reason NoFrequentKubeletRestart: kubelet is functioning properly"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "dl5BM19HbUwhPURtc1BCTTc1I1h8XkkiYT5DNXlWSktv",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type FrequentDockerRestart, reason NoFrequentDockerRestart: docker is functioning properly"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "bjdFUzgmR092cSw9KldKXlQ8TSElSWhqVXsmY0QtZXRl",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type FilesystemCorruptionProblem, reason FilesystemIsOK: Filesystem is healthy"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "J3NbNXVTKj54fVVoJmMjNlZqal1JeHRbY2VPX3cxdig9",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type VMEventScheduled, reason NoVMEventScheduled: VM has no scheduled event"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "J1dHNmRzR29iYlYwbDpzQ3FeSERyPzJfXm5teydkaEZq",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type KernelDeadlock, reason KernelHasNoDeadlock: kernel has no deadlock"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "SmNnaChrY3VUd0cpWDFTO093WUlVVnwoUGldTmNQY01T",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type ReadonlyFilesystem, reason FilesystemIsNotReadOnly: Filesystem is not read-only"
+            },
+            {
+              "sensitive": [
+                {
+                  "masked": "QmlQb3A9KmpOUjl2ez1MSSp1fTlqL25uPkpdTUl4N3dU",
+                  "unmasked": "aks-agentpool-96467877-vmss000001"
+                }
+              ],
+              "text": "aks-agentpool-96467877-vmss000001 has condition of type ContainerRuntimeProblem, reason ContainerRuntimeIsUp: container runtime service is up"
+            }
+          ],
+          "kind": "Node",
+          "name": "aks-agentpool-96467877-vmss000001",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "2eae8e80728b752aab920063d435ef7094f2f4cff7156046d356f253e232cd88",
+          "lifecycle": "updated"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappconfig",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205609",
+          "uid": "64150d2f-a3a6-463a-8f0f-d312912c0103"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le ConfigMap app-config est vide, ce qui signifie qu'aucune donnée de configuration n'a été fournie.\n\nSolution: \n1. Vérifiez le fichier de configuration source.\n2. Ajoutez les données nécessaires au ConfigMap.\n3. Exécutez `kubectl apply -f \u003cconfigmap-file.yaml\u003e` pour mettre à jour le ConfigMap.\n4. Redémarrez les pods utilisant ce ConfigMap.",
+          "error": [
+            {
+              "text": "ConfigMap app-config is empty"
+            }
+          ],
+          "kind": "ConfigMap",
+          "name": "default/app-config",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "dccba00199c45f811a06cb40879375243f4025c74e45f1030efe0159578c3452",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappmemoryheavy",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205610",
+          "uid": "58dc2833-0325-488e-94a9-59180c295d71"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le déploiement a 1 réplique, mais aucune n'est disponible avec le statut \"en cours d'exécution\".\n\nSolution: \n1. Vérifiez les logs du pod avec `kubectl logs \u003cpod-name\u003e`.\n2. Assurez-vous que le pod est correctement configuré (ressources, images).\n3. Vérifiez les événements avec `kubectl describe deployment \u003cdeployment-name\u003e`.\n4. Corrigez les erreurs éventuelles et redémarrez le déploiement.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "dGQ6NHRYLA==",
+                  "unmasked": "default"
+                },
+                {
+                  "masked": "Jm19c1BBcHRxdCl2JWthcQ==",
+                  "unmasked": "app-memory-heavy"
+                }
+              ],
+              "text": "Deployment default/app-memory-heavy has 1 replicas but 0 are available with status running"
+            }
+          ],
+          "kind": "Deployment",
+          "name": "default/app-memory-heavy",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "b1be5abdc2c8bd4b52296b84c5af86520ede57a4ea0d9cf604e3e642e1fc0947",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 3,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappmemoryheavy7ff59c696fjjxx",
+          "namespace": "k8sgpt",
+          "resourceVersion": "227085",
+          "uid": "ff4c4a98-b84a-425c-a1ac-9c6997b3eba5"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le conteneur \"app-memory-heavy\" s'est arrêté avec un code de sortie 255, ce qui indique une erreur, probablement due à un manque de mémoire.\n\nSolution: \n1. Vérifiez les logs du pod: `kubectl logs app-memory-heavy-7ff59c696-fjjxx`.\n2. Augmentez la limite de mémoire dans la définition du pod.\n3. Redémarrez le pod: `kubectl delete pod app-memory-heavy-7ff59c696-fjjxx`.",
+          "error": [
+            {
+              "text": "the termination reason is Error exitCode=255 container=app-memory-heavy pod=app-memory-heavy-7ff59c696-fjjxx"
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/app-memory-heavy-7ff59c696-fjjxx",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "02d4c1788294469e54d8fba3ee88316af76701b1d8caf8ad8c17bfd06c794a67",
+          "lifecycle": "updated"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappsimple",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205617",
+          "uid": "6d57961c-45e8-43f5-8ebe-2f7f6f0d4e15"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le déploiement default/app-simple a 1 réplique mais aucune n'est disponible avec le statut en cours d'exécution.\n\nSolution: \n1. Vérifiez les logs du pod: `kubectl logs \u003cpod-name\u003e`.\n2. Vérifiez l'état des pods: `kubectl get pods`.\n3. Assurez-vous que les ressources sont suffisantes.\n4. Vérifiez la configuration du déploiement.\n5. Redémarrez le déploiement: `kubectl rollout restart deployment \u003cdeployment-name\u003e`.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "TU0sT208ew==",
+                  "unmasked": "default"
+                },
+                {
+                  "masked": "MTw2Z3QlS3ZeMw==",
+                  "unmasked": "app-simple"
+                }
+              ],
+              "text": "Deployment default/app-simple has 1 replicas but 0 are available with status running"
+            }
+          ],
+          "kind": "Deployment",
+          "name": "default/app-simple",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "55ba06e4cc25cd9494bf81f12c2528fe11e3d7babde6e399fe3824d730c4d12e",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappsimple6668446499sz9bg",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205624",
+          "uid": "c0916d94-48d3-4727-994d-924befd77bbd"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: La clé db_host est introuvable dans le ConfigMap default/app-config.\n\nSolution: \n1. Vérifiez le ConfigMap avec `kubectl get configmap app-config -n default -o yaml`.\n2. Assurez-vous que la clé db_host existe.\n3. Si manquante, ajoutez-la avec `kubectl edit configmap app-config -n default`.\n4. Redémarrez les pods concernés pour appliquer les modifications.",
+          "error": [
+            {
+              "text": "couldn't find key db_host in ConfigMap default/app-config"
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/app-simple-6668446499-sz9bg",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "45b567774592aca4dc38274b0df4363caf40dab82c09a0490323b5b788d2db10",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappwithpvc",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205614",
+          "uid": "35610d26-45ab-465d-89b1-48c729d0753c"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le déploiement a 1 réplique, mais aucune n'est disponible avec le statut \"en cours d'exécution\".\n\nSolution: \n1. Vérifiez les logs du pod: `kubectl logs \u003cpod-name\u003e`.\n2. Assurez-vous que l'image est correcte et accessible.\n3. Vérifiez les ressources (CPU/mémoire) disponibles.\n4. Vérifiez les probes de readiness/liveness.\n5. Redémarrez le déploiement si nécessaire: `kubectl rollout restart deployment \u003cdeployment-name\u003e`.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "dnNQTC4+KA==",
+                  "unmasked": "default"
+                },
+                {
+                  "masked": "MnJ5Vm4jbFdQZ3pJ",
+                  "unmasked": "app-with-pvc"
+                }
+              ],
+              "text": "Deployment default/app-with-pvc has 1 replicas but 0 are available with status running"
+            }
+          ],
+          "kind": "Deployment",
+          "name": "default/app-with-pvc",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "4c173c0d8b26c0e656cb1c9f68b5b4659bb2ecdf4065d08ec2ce72b11057cd44",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultappwithpvc58bd9bf78qg2lt",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205619",
+          "uid": "517a6f4c-1d49-4d90-b202-96cc9da4f9a9"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Aucun nœud disponible, le pod a des PersistentVolumeClaims non liés. La préemption ne résout pas le problème de planification.\n\nSolution: \n1. Vérifiez les PersistentVolumeClaims (PVC) du pod.\n2. Assurez-vous qu'il existe un PersistentVolume (PV) correspondant.\n3. Si aucun PV n'est disponible, créez-en un ou modifiez le PVC pour qu'il corresponde à un PV existant.\n4. Redéployez le pod.",
+          "error": [
+            {
+              "text": "0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling."
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/app-with-pvc-58bd9bf78-qg2lt",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "c6daa9fda4ee8d7c238bf434b1e2bb8d587e0b1376c3580b7db6887e6b97d13a",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultbackend",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205618",
+          "uid": "4afbb507-2d89-4ed7-adb0-3a7653cc3a9f"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le déploiement default/backend a 1 réplique, mais aucune n'est disponible avec le statut en cours d'exécution.\n\nSolution: \n1. Vérifiez les logs du pod avec `kubectl logs \u003cpod-name\u003e`.\n2. Assurez-vous que les ressources sont suffisantes (CPU/mémoire).\n3. Vérifiez les conditions de santé du pod avec `kubectl describe pod \u003cpod-name\u003e`.\n4. Si nécessaire, ajustez les configurations et redémarrez le déploiement.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "X3RnZSNxJg==",
+                  "unmasked": "default"
+                },
+                {
+                  "masked": "OF1VTGlDNA==",
+                  "unmasked": "backend"
+                }
+              ],
+              "text": "Deployment default/backend has 1 replicas but 0 are available with status running"
+            }
+          ],
+          "kind": "Deployment",
+          "name": "default/backend",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "d3a7936af9d188acc96f87cbd2f8cd5a273055f5928073443a43c307dc01db6e",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 10,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultbackend5f4546966flpkcm",
+          "namespace": "k8sgpt",
+          "resourceVersion": "219702",
+          "uid": "b77ed5b7-eaec-457e-8cd5-7cecacbf353d"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le message d'erreur indique que l'image Docker \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\" n'a pas pu être trouvée lors de la tentative de téléchargement.\n\nSolution: \n1. Vérifiez l'orthographe de l'image.\n2. Assurez-vous que l'image existe sur le registre.\n3. Essayez de tirer une autre version de l'image.\n4. Vérifiez votre connexion Internet.\n5. Recherchez des problèmes de permission ou de configuration.",
+          "error": [
+            {
+              "text": "Back-off pulling image \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": failed to resolve reference \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": mcr.microsoft.com/oss/nginx/nginx:1.23-alpine: not found"
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/backend-5f4546966f-lpkcm",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "4cc24babd3502166e0d532f4c6be4a733baefc9ca943d31402fac7e210f617e3",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultbackendservice",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205621",
+          "uid": "170c6b5a-1151-4f05-9bea-6a42a575319c"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le message indique que le service Kubernetes n'a pas d'endpoints, ce qui signifie qu'il n'y a pas de pods correspondants avec les labels spécifiés.\n\nSolution: \n1. Vérifiez les pods avec: `kubectl get pods --show-labels`.\n2. Vérifiez le service avec: `kubectl get svc`.\n3. Assurez-vous que les labels sur les pods correspondent à ceux du service.\n4. Si nécessaire, modifiez les labels ou le service pour qu'ils correspondent.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "Yl9i",
+                  "unmasked": "app"
+                },
+                {
+                  "masked": "IyFpMCdhSmI7SFo1XilKbC51JA==",
+                  "unmasked": "backend-wrong-label"
+                }
+              ],
+              "text": "Service has no endpoints, expected label app=backend-wrong-label"
+            }
+          ],
+          "kind": "Service",
+          "name": "default/backend-service",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "05bf4203d960a3bd05142b1e46346c3ac0b53f097a4709872a4b6fba36505b0f",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 14,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultbrokenpod",
+          "namespace": "k8sgpt",
+          "resourceVersion": "223712",
+          "uid": "abcb40ed-ac4e-475b-8f0c-98ef28b7dc77"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: L'image \"nginx:1.a.b.c\" n'a pas été trouvée sur Docker Hub, ce qui empêche le téléchargement.\n\nSolution: \n1. Vérifiez le nom de l'image et la balise (tag) pour des erreurs.\n2. Utilisez une balise valide comme \"nginx:latest\" ou \"nginx:1.21\".\n3. Mettez à jour votre manifeste Kubernetes avec l'image correcte.\n4. Redéployez le pod.",
+          "error": [
+            {
+              "text": "Back-off pulling image \"nginx:1.a.b.c\": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image \"docker.io/library/nginx:1.a.b.c\": failed to resolve reference \"docker.io/library/nginx:1.a.b.c\": docker.io/library/nginx:1.a.b.c: not found"
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/broken-pod",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "5da75bfb2217cef0f948edcb35d02755e1b30fd13b8ddc53092a3d3b428b0f4c",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultfrontend",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205615",
+          "uid": "1bf85770-9c93-4b0a-888c-dfd92dc54789"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le déploiement a 1 réplique, mais aucune n'est disponible avec le statut en cours d'exécution.\n\nSolution: \n1. Vérifiez les logs du pod avec `kubectl logs \u003cpod-name\u003e`.\n2. Assurez-vous que le pod est bien configuré (image, variables d'environnement).\n3. Vérifiez les événements avec `kubectl describe deployment \u003cdeployment-name\u003e`.\n4. Si nécessaire, augmentez les ressources ou corrigez les problèmes détectés.",
+          "error": [
+            {
+              "sensitive": [
+                {
+                  "masked": "SlNSSzVHJw==",
+                  "unmasked": "default"
+                },
+                {
+                  "masked": "dUhoZSREKzU=",
+                  "unmasked": "frontend"
+                }
+              ],
+              "text": "Deployment default/frontend has 1 replicas but 0 are available with status running"
+            }
+          ],
+          "kind": "Deployment",
+          "name": "default/frontend",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "bdcd8a3a4a3153066edf098270fc92d576ee464b64fd97d31858cd3ce553e919",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T13:37:08Z",
+          "generation": 1,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultfrontend6f446d69bkmdlv",
+          "namespace": "k8sgpt",
+          "resourceVersion": "227079",
+          "uid": "09f3fea2-74c1-460b-b4e5-2fd005df3a02"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le message indique que le conteneur \"frontend\" du pod \"frontend-6f446d69b-kmdlv\" s'est terminé avec le statut \"Completed\", ce qui signifie qu'il a terminé son exécution normalement.\n\nSolution: \n1. Vérifiez les logs du conteneur avec `kubectl logs frontend-6f446d69b-kmdlv`.\n2. Assurez-vous que le conteneur est configuré pour redémarrer si nécessaire.\n3. Si un redémarrage est désiré, modifiez la politique de redémarrage du pod.\n4. Redéployez le pod si nécessaire.",
+          "error": [
+            {
+              "text": "the last termination reason is Completed container=frontend pod=frontend-6f446d69b-kmdlv"
+            }
+          ],
+          "kind": "Pod",
+          "name": "default/frontend-6f446d69b-kmdlv",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "af1aab247504e54c85494f5e41bc8b0b3bb3781e22bb5d9fb21b9082e3c446f8",
+          "lifecycle": "updated"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-15T13:16:43Z",
+          "generation": 1,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultkuberootca.crt",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205611",
+          "uid": "e14117f9-53cf-40aa-a508-0721691d85c6"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: Le ConfigMap kube-root-ca.crt n'est utilisé par aucun pod dans le namespace. Cela signifie qu'il existe un ConfigMap sans référence dans les pods, ce qui peut indiquer une configuration non utilisée.\n\nSolution: \n1. Vérifiez le namespace du ConfigMap.\n2. Listez les pods dans ce namespace: `kubectl get pods -n \u003cnamespace\u003e`.\n3. Modifiez ou créez un pod pour utiliser ce ConfigMap.\n4. Appliquez les modifications: `kubectl apply -f \u003cpod-definition.yaml\u003e`.",
+          "error": [
+            {
+              "text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace"
+            }
+          ],
+          "kind": "ConfigMap",
+          "name": "default/kube-root-ca.crt",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "a6361aec349c505a8a8854fb6180827df0a11548aff4e1f1902a2e9c2454edff",
+          "lifecycle": "historical"
+        }
+      },
+      {
+        "apiVersion": "core.k8sgpt.ai/v1alpha1",
+        "kind": "Result",
+        "metadata": {
+          "creationTimestamp": "2025-10-16T12:23:55Z",
+          "generation": 2,
+          "labels": {
+            "k8sgpts.k8sgpt.ai/backend": "azureopenai",
+            "k8sgpts.k8sgpt.ai/name": "k8sgpt-analyzer",
+            "k8sgpts.k8sgpt.ai/namespace": "k8sgpt"
+          },
+          "name": "defaultmypvc",
+          "namespace": "k8sgpt",
+          "resourceVersion": "205612",
+          "uid": "2b8913a0-9bf6-4812-89bf-3195e234cea0"
+        },
+        "spec": {
+          "autoRemediationStatus": {},
+          "backend": "azureopenai",
+          "details": "Error: The specified storage class \"non-existent-storage-class\" does not exist in the Kubernetes cluster.\n\nSolution:\n1. Check available storage classes: `kubectl get storageclass`\n2. If missing, create a new storage class or correct the name in your resource definition.\n3. Apply the new storage class: `kubectl apply -f \u003cstorage-class-definition\u003e.yaml`\n4. Retry your operation.",
+          "error": [
+            {
+              "text": "storageclass.storage.k8s.io \"non-existent-storage-class\" not found"
+            }
+          ],
+          "kind": "PersistentVolumeClaim",
+          "name": "default/my-pvc",
+          "parentObject": ""
+        },
+        "status": {
+          "contentHash": "52f5101c6d722bce2a26b61528160e7376bcf7391ee659c27cb4221ff62697cf",
+          "lifecycle": "historical"
+        }
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  }
+}

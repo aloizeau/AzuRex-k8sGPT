@@ -1,0 +1,89 @@
+{
+  "cmd": "k8sgpt analyze --explain --filter=Pod --namespace=default -l french -o json",
+  "results": {
+    "provider": "azureopenai",
+    "errors": null,
+    "status": "ProblemDetected",
+    "problems": 6,
+    "results": [
+      {
+        "kind": "Pod",
+        "name": "default/broken-pod",
+        "error": [
+          {
+            "Text": "Back-off pulling image \"nginx:1.a.b.c\": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image \"docker.io/library/nginx:1.a.b.c\": failed to resolve reference \"docker.io/library/nginx:1.a.b.c\": docker.io/library/nginx:1.a.b.c: not found",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: L'image \"nginx:1.a.b.c\" n'a pas été trouvée sur le registre Docker (docker.io). \n\nSolution: \n1. Vérifiez le nom et la balise de l'image (nginx:1.a.b.c).\n2. Si incorrect, corrigez avec une balise valide (ex: nginx:latest).\n3. Modifiez votre déploiement Kubernetes avec `kubectl edit deployment \u003cnom\u003e` ou mettez à jour votre fichier YAML.\n4. Redémarrez le déploiement avec `kubectl rollout restart \u003cnom\u003e` si nécessaire.",
+        "parentObject": ""
+      },
+      {
+        "kind": "Pod",
+        "name": "default/frontend-6f446d69b-kmdlv",
+        "error": [
+          {
+            "Text": "the last termination reason is Completed container=frontend pod=frontend-6f446d69b-kmdlv",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: Le message indique que le conteneur \"frontend\" du pod \"frontend-6f446d69b-kmdlv\" a terminé sans erreur. Cela peut être dû à un arrêt normal du conteneur.\n\nSolution: \n1. Vérifiez les logs du pod: `kubectl logs frontend-6f446d69b-kmdlv`\n2. Assurez-vous que le déploiement est configuré avec des probes (readiness/liveness).\n3. Si nécessaire, ajustez les paramètres de redémarrage ou augmentez les ressources pour éviter des arrêts prématurés.",
+        "parentObject": "Deployment/frontend"
+      },
+      {
+        "kind": "Pod",
+        "name": "default/app-memory-heavy-7ff59c696-fjjxx",
+        "error": [
+          {
+            "Text": "the last termination reason is Error container=app-memory-heavy pod=app-memory-heavy-7ff59c696-fjjxx",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: Le conteneur \"app-memory-heavy\" du pod \"app-memory-heavy-7ff59c696-fjjxx\" a échoué en raison d'un problème de mémoire.\n\nSolution: \n1. Vérifiez les limites de mémoire du pod.\n2. Augmentez les ressources mémoire demandées.\n3. Modifiez le code de l'application pour optimiser l'utilisation de la mémoire.\n4. Redéployez le pod.\n5. Surveillez l'utilisation de la mémoire pour éviter des problèmes futurs.",
+        "parentObject": "Deployment/app-memory-heavy"
+      },
+      {
+        "kind": "Pod",
+        "name": "default/app-simple-6668446499-sz9bg",
+        "error": [
+          {
+            "Text": "couldn't find key db_host in ConfigMap default/app-config",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: La clé db_host est manquante dans le ConfigMap default/app-config. Cela signifie que l'application s'attend à une variable d'environnement qui n'est pas définie.\n\nSolution: \n1. Vérifiez le ConfigMap avec `kubectl get configmap app-config -o yaml`.\n2. Ajoutez la clé db_host en modifiant le ConfigMap: `kubectl edit configmap app-config`.\n3. Définissez db_host avec la valeur appropriée.\n4. Redémarrez vos pods selon les besoins.",
+        "parentObject": "Deployment/app-simple"
+      },
+      {
+        "kind": "Pod",
+        "name": "default/app-with-pvc-58bd9bf78-qg2lt",
+        "error": [
+          {
+            "Text": "0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: Aucun nœud disponible : le pod a des PersistentVolumeClaims non liés. La préemption n'est pas utile pour la planification.\n\nSolution: \n1. Vérifiez les PersistentVolumeClaims (PVC) de votre pod.\n2. Assurez-vous qu'il existe des PersistentVolumes (PV) disponibles correspondant aux PVC.\n3. Créez ou modifiez des PV pour satisfaire les PVC.\n4. Replanifiez le pod après avoir résolu les problèmes de volume.",
+        "parentObject": "Deployment/app-with-pvc"
+      },
+      {
+        "kind": "Pod",
+        "name": "default/backend-5f4546966f-lpkcm",
+        "error": [
+          {
+            "Text": "Back-off pulling image \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": failed to resolve reference \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\": mcr.microsoft.com/oss/nginx/nginx:1.23-alpine: not found",
+            "KubernetesDoc": "",
+            "Sensitive": []
+          }
+        ],
+        "details": "Error: Impossible de récupérer l'image \"mcr.microsoft.com/oss/nginx/nginx:1.23-alpine\" car elle est introuvable.\n\nSolution:\n1. Vérifiez l'orthographe de l'image.\n2. Assurez-vous que l'image existe dans le registre Microsoft.\n3. Si elle a été supprimée, utilisez une autre version compatible ou mettez à jour votre image dans le manifeste Kubernetes.",
+        "parentObject": "Deployment/backend"
+      }
+    ]
+  }
+}

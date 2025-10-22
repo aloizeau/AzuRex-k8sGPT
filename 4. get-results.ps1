@@ -1,0 +1,1 @@
+kubectl get results -n k8sgpt -o json

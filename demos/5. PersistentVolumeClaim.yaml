@@ -31,17 +31,7 @@ spec:
           image: mcr.microsoft.com/mssql/server:2022-latest
           volumeMounts:
             - name: data
-              mountPath: /data
-          livenessProbe:
-            tcpSocket:
-              port: 1433
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          readinessProbe:
-            tcpSocket:
-              port: 1433
-            initialDelaySeconds: 15
-            periodSeconds: 10
+              mountPath: /data          
       volumes:
         - name: data
           persistentVolumeClaim:
