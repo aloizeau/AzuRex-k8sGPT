@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+  namespace: dev
+spec:
+  containers:
+  - name: alpine
+    image: alpine:3.6
+    command: ["sh", "-c", "tail /dev/zero"]  # Consomme toute la mémoire disponible
+    resources:
+      limits:
+        memory: "64Mi"
