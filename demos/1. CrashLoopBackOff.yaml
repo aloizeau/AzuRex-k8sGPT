@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name: broken-pod
-      image: nginx:1.a.b.c
+      image: nginx:1.a.b.c # Image invalide pour provoquer un CrashLoopBackOff, veuillez corriger la version de l'image avec une version valide comme "1.29.3"
       resources:
         requests:
           cpu: "100m"
